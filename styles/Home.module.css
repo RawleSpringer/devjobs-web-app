@@ -1,3 +1,22 @@
 .container {
   padding: 0 128px;
 }
+
+.jobsContainer {
+  margin-top: 80px;
+  padding: 0 128px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.button {
+  background-color: #5964e0;
+  border: none;
+  border-radius: 5px;
+  padding: 7px 30px;
+  color: #ffffff;
+  margin: 0 auto;
+  margin-top: 60px;
+  display: block;
+}

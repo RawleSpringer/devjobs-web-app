@@ -1,10 +1,14 @@
+import fsPromises from 'fs/promises';
+import path from 'path';
 import Head from 'next/head';
 import Image from 'next/image';
 import styles from '../styles/Home.module.css';
 import Layout from '../components/layout';
 import SearchBar from '../components/SearchBar';
+import Card from '../components/Card';
 
-export default function Home() {
+export default function Home({ jobsData }) {
+  console.log(jobsData);
   return (
     <Layout>
       <Head>
@@ -13,6 +17,24 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <SearchBar />
+      <section className={styles.jobsContainer}>
+        {jobsData.map((job) => {
+          return <Card key={job.id} job={job} />;
+        })}
+      </section>
+      <button className={styles.button}>Learn More</button>
     </Layout>
   );
+}
+
+export async function getStaticProps() {
+  const filePath = path.join(process.cwd(), 'data.json');
+  const jsonData = await fsPromises.readFile(filePath);
+  const jobsData = JSON.parse(jsonData);
+
+  return {
+    props: {
+      jobsData,
+    },
+  };
 }
