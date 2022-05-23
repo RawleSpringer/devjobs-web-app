@@ -1,9 +1,11 @@
 .container {
-  border: 1px solid blue;
   border-radius: 5px;
   position: relative;
-  height: 253px;
+  height: 228px;
   gap: 15px;
+  box-shadow: #959da533 0px 8px 24px;
+  background-color: #ffffff;
+  margin-bottom: 30px;
 }
 
 .container img {
@@ -13,7 +15,9 @@
 
 .container p {
   margin-top: 5px;
-  margin-left: 20px;
+  margin-left: 40px;
+  color: #6e8098;
+  font-size: 14px;
 }
 
 .container p:first-child {
@@ -30,6 +34,19 @@
   margin-top: 50px;
 }
 
+.container p:nth-child(3) {
+  font-size: 18px;
+  font-weight: bold;
+  color: #19202d;
+  cursor: pointer;
+}
+
+.container p:nth-child(3):hover {
+  color: #6e8098;
+}
+
 .container p:last-child {
-  margin-top: 50px;
+  margin-top: 40px;
+  color: #5964e0;
+  font-weight: bold;
 }

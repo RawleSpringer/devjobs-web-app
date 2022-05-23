@@ -37,6 +37,11 @@
   align-items: center;
   height: 24px;
   margin-left: 30px;
+  font-size: 16px;
+}
+
+.container > div > p > p {
+  font-weight: bold;
 }
 
 .container img {
@@ -49,10 +54,13 @@
 
 .container input[type='text'] {
   border: none;
+  cursor: pointer;
+  font-size: 16px;
 }
 
 .container input[type='checkbox'] {
   margin-right: 10px;
+  cursor: pointer;
 }
 
 .container button {
@@ -62,4 +70,9 @@
   border-radius: 5px;
   padding: 7px 30px;
   color: #ffffff;
+  cursor: pointer;
+}
+
+.container button:hover {
+  background-color: #939bf4;
 }

@@ -8,7 +8,6 @@ import SearchBar from '../components/SearchBar';
 import Card from '../components/Card';
 
 export default function Home({ jobsData }) {
-  console.log(jobsData);
   return (
     <Layout>
       <Head>
